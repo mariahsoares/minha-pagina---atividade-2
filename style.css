@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: rgb(45, 0, 97);
+}
+
+/* HEADER */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(21, 0, 46);
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    color: rgb(174, 103, 255);
+    font-size: 40px;
+}
+
+/* GRID PRINCIPAL */
+.layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "menu conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo"
+        "menu conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo";
+    gap: 20px;
+    padding: 20px;
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+    grid-area: menu;
+    background-color: rgb(21, 0, 46);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-lateral a:hover {
+    text-decoration: underline;
+}
+
+/* CONTEÚDO */
+.conteudo {
+    grid-area: conteudo;
+}
+
+/* FOTO + TEXTO */
+.container2 {
+    display: flex;
+    align-items: center;
+}
+
+.minhaFoto {
+    width: 30%;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+.texto {
+    color: white;
+    font-size: 22px;
+    padding: 40px;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    width: 90%;
+    margin: 15px 0;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* REQUISITO GRID-COLUMN / SPAN */
+.destaque {
+    grid-column: 1 / -1;
+}
+
+/* TEXTO */
+h2 {
+    color: rgb(71, 0, 153);
+    font-size: 30px;
+}
+
+.paragrafo {
+    font-size: 20px;
+    color: rgb(21, 0, 46);
+}
+
+/* CONTATO */
+.contato {
+    margin-top: 20px;
+}
+
+.contato a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(174, 103, 255);
+}
+
+h4 {
+    font-size: 20px;
+    margin: 40px;
+    color: white;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 15px;
+    background: rgb(21, 0, 46);
+    color: rgb(174, 103, 255);
+    margin-top: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "menu"
+            "conteudo";
+    }
+
+    .menu-lateral {
+        position: relative;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .minhaFoto {
+        width: 70%;
+    }
+
+    .texto {
+        font-size: 18px;
+        padding: 20px;
+    }
+}
