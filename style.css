@@ -156,6 +156,7 @@ footer {
 /* RESPONSIVO */ 
 @media (max-width: 768px) {
 
+    /* HEADER */
     .cabecalho {
         flex-direction: column;
         justify-content: center;
@@ -176,6 +177,7 @@ footer {
         margin: 0;
     }
 
+    /* GRID */
     .layout {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -184,6 +186,7 @@ footer {
         padding: 10px;
     }
 
+    /* MENU */
     .menu-lateral {
         position: relative;
         height: auto;
@@ -192,6 +195,7 @@ footer {
         padding: 10px;
     }
 
+    /* CONTEÚDO */
     .container2 {
         flex-direction: column;
         text-align: center;
