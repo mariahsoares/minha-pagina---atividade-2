@@ -100,9 +100,10 @@ h1 {
     transform: translateY(-5px);
 }
 
-/* REQUISITO GRID-COLUMN / SPAN */
-.destaque {
-    grid-column: 1 / -1;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
 }
 
 /* TEXTO */
@@ -213,5 +214,9 @@ footer {
     .card {
         width: 100%;
         padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
